@@ -1,21 +1,28 @@
 #!/usr/bin/env bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-ROOT="$(cd "${DIR}"/../ && pwd)"
+ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/.. && pwd )"
 
+# import libraries
+. "${ROOT}"/bin/lib/env.sh
+. "${ROOT}"/bin/lib/images.sh
+. "${ROOT}"/bin/lib/rm.sh
+. "${ROOT}"/bin/lib/tty.sh
 . "${ROOT}"/docker/lib/docker_host_user_id.sh
-. "${DIR}"/lib/images.sh
-. "${DIR}"/lib/rm.sh
-. "${DIR}"/lib/tty.sh
 
+# initialize network
+. "${ROOT}"/docker/bin/init/network.sh
+
+# execute php command
 docker run \
-    -i${TTY} \
     -e LOCAL_USER_ID=$DOCKER_HOST_USER_ID \
+    -i \
+    ${TTY} \
     -v $(pwd):/workdir \
     -v ~/.composer:/home/user/.composer \
+    -v ~/.ssh:/home/user/.ssh \
     -w /workdir \
     --env-file "$(pwd)"/docker/.env \
-    --net behatgoogleplaceautocomplete_default \
+    --net ${PROJECT_NAME}_default \
     --link web:behatgoogleplaceautocomplete.local \
-    ${RM} \
+    --rm \
     ${PHP_ACCOUNT}/${PHP_REPO}:${PHP_TAG} php "$@"
