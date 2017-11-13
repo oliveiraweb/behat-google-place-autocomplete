@@ -1,15 +1,14 @@
-<?php namespace Medology\Behat\GooglePlaceAutocomplete\Contexts;
+<?php namespace Medology\Behat\Mink;
 
 use Behat\Behat\Context\Context;
 use Behat\Mink\Exception\ExpectationException;
 use Exception;
-use Medology\Behat\Mink\UsesFlexibleContext;
 use Medology\Spinner;
 
 /**
- * A context for handling tests for the Gooogle Place Autocomplete Javascript script.
+ * A context for handling tests for the Google Place Autocomplete Javascript script.
  */
-class GooglePlaceAutocompleteContext implements Context
+class GooglePlaceAutoCompleteContext implements Context
 {
     use UsesFlexibleContext;
 
