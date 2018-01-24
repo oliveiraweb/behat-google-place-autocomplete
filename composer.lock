@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8ac5c17e256a0bc40bc2e4c42950356",
+    "content-hash": "c614808ccc7a5aa19a99dc2d2eb70df4",
     "packages": [
         {
             "name": "behat/behat",
@@ -1612,6 +1612,51 @@
                 "webdriver"
             ],
             "time": "2016-03-05T09:10:18+00:00"
+        },
+        {
+            "name": "chekote/behat-retry-extension",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Chekote/BehatRetryExtension.git",
+                "reference": "41a86eb80e5f64973790c79128d6996ddb36c979"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Chekote/BehatRetryExtension/zipball/41a86eb80e5f64973790c79128d6996ddb36c979",
+                "reference": "41a86eb80e5f64973790c79128d6996ddb36c979",
+                "shasum": ""
+            },
+            "require": {
+                "behat/behat": "~3.0"
+            },
+            "require-dev": {
+                "friends-of-behat/test-context": "^1.0"
+            },
+            "type": "behat-extension",
+            "autoload": {
+                "psr-0": {
+                    "Chekote\\BehatRetryExtension": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Donald Tyler",
+                    "email": "domhnall.tilliere@gmail.com"
+                }
+            ],
+            "description": "Automatically retry \"Then\" steps in Behat",
+            "keywords": [
+                "asynchronous",
+                "race-condition",
+                "retry",
+                "test"
+            ],
+            "time": "2019-03-01T13:05:12+00:00"
         },
         {
             "name": "instaclick/php-webdriver",
