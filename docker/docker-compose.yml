@@ -4,8 +4,7 @@ services:
   web:
     image: php:7-apache
     volumes:
-      - ..:/data
-      - ../web:/var/www/html
+      - ..:/var/www
     env_file: .env
     ports:
       - 80:80
