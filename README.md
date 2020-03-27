@@ -24,7 +24,7 @@ Clone the repository:
 
 ```bash
 git clone git@github.com:Medology/behat-google-place-autocomplete.git
-cd stdcheck.com
+cd behat-google-place-autocomplete
 ```
 
 ```bash
@@ -38,7 +38,7 @@ Update your hosts file:
 
 ```bash
 echo -e "\n\
-$(docker-machine ip $DOCKER_MACHINE_NAME) behatgoogleplaceautocomplete.local www.behatgoogleplaceautocomplete.local\n\
+127.0.0.1 behatgoogleplaceautocomplete.local www.behatgoogleplaceautocomplete.local\n\
 " | sudo tee -a /etc/hosts
 ```
 
