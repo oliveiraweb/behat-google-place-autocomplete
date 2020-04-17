@@ -11,12 +11,7 @@ Login to with your docker.com account (so you can pull private images)
 docker login
 ```
 
-You will also want to ensure that `./bin` is in your `$PATH` and is the highest priority. You can do so by adding the
-following to the end of the same profile mentioned above:
-
-```
-export PATH=./bin:$PATH
-```
+[Configure your system path](https://github.com/Medology/Scripts/wiki/Project-executables-and-your-system-path).
 
 ## Installing The Project for Development
 
