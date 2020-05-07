@@ -19,7 +19,7 @@ commands:
             git config --global --add url.git@github.com:.insteadOf https://github.com/
       - run:
           name: Merge master
-          command: git fetch origin && git merge origin/master --no-edit
+          command: git fetch origin && git merge origin/1.0 --no-edit
   test:
     description: "Set up and run tests"
     steps:
