@@ -4,8 +4,7 @@ services:
   web:
     image: php:7-apache
     volumes:
-      - ..:/data
-      - ../web:/var/www/html
+      - ..:/var/www
     env_file: .env
     ports:
       - 80:80
@@ -17,11 +16,9 @@ services:
     environment:
       - no_proxy:behatgoogleplaceautocomplete.local
     links:
-      - web
       - web:behatgoogleplaceautocomplete.local
     volumes:
       - /dev/shm:/dev/shm
-      - ..:/data
     env_file: .env
     ports:
       - 5900:5900

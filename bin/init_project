@@ -13,11 +13,6 @@ echo "Installing Composer dependencies..."
 composer install
 exitCheck $?
 
-echo "Installing node dependencies..."
-npm install
-exitCheck $?
-
-# install bower dependencies
-echo "Installing Bower dependencies..."
-bower install
+echo "Running Yarn..."
+yarn
 exitCheck $?
