@@ -1,4 +1,6 @@
-<?php namespace Medology\Behat\Mink;
+<?php
+
+namespace Medology\Behat\Mink;
 
 use Behat\Behat\Context\Context;
 use Behat\Mink\Exception\ExpectationException;
@@ -16,11 +18,12 @@ class GooglePlaceAutoCompleteContext implements Context
      * Chooses the first address in the autocomplete popup.
      *
      * @When /^(?:I |)choose the first place autocomplete option$/i
+     *
      * @throws ExpectationException If the first address is not found
      */
     public function chooseFirstOption()
     {
-        /** @noinspection PhpUnhandledExceptionInspection ExpectationException is actaully thown instead */
+        /* @noinspection PhpUnhandledExceptionInspection ExpectationException is actaully thown instead */
         Spinner::waitFor(function () {
             try {
                 $pac_first_item = $this->flexibleContext->getSession()->getPage()->find(
