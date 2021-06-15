@@ -11,7 +11,7 @@
     "symfony/config": "^4.0"
   },
   "require-dev":{
-    "vlucas/phpdotenv": "^2.3",
+    "vlucas/phpdotenv": "^5.3",
     "behat/mink-selenium2-driver": "*",
     "chekote/behat-retry-extension": "^1.1"
   },
