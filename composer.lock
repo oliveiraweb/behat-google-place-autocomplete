@@ -550,7 +550,7 @@
         },
         {
             "name": "medology/flexible-mink",
-            "version": "v2.5.1",
+            "version": "v2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Medology/FlexibleMink.git",
