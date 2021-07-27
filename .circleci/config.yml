@@ -25,7 +25,7 @@ commands:
           command: bin/ci-style-fixer
       - run:
           name: Merge master
-          command: git fetch origin && git merge origin/1.0 --no-edit
+          command: git fetch origin && git merge origin/master --no-edit
   test:
     description: "Set up and run tests"
     steps:
