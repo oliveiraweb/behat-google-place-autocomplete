@@ -2,7 +2,7 @@ version: 2.1
 
 commands:
   prep:
-    description: "Bring the repository up-to-date with master and handle setup"
+    description: "Bring the repository up-to-date with branch 1.0 and handle setup"
     steps:
       - checkout
       - restore_cache:
