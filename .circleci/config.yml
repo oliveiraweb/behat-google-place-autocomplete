@@ -2,7 +2,7 @@ version: 2.1
 
 commands:
   prep:
-    description: "Bring the repository up-to-date with master and handle setup"
+    description: "Bring the repository up-to-date with branch 1.0 and handle setup"
     steps:
       - checkout
       - restore_cache:
@@ -19,7 +19,7 @@ commands:
             git config --global --add url.git@github.com:.insteadOf https://github.com/
       - run:
           name: Merge master
-          command: git fetch origin && git merge origin/master --no-edit
+          command: git fetch origin && git merge origin/1.0 --no-edit
   test:
     description: "Set up and run tests"
     steps:
