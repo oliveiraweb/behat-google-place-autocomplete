@@ -58,22 +58,8 @@ jobs:
       - prep
       - test
 
-  test-php5:
-    working_directory: /tmp/behat-google-place-autocomplete
-    parallelism: 1
-    machine:
-      enabled: true
-    environment:
-      - USE_PHP5: true
-      - PATH: /opt/circleci/.pyenv/shims:./bin:./node_modules/.bin:./vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-
-    steps:
-      - prep
-      - test
-
 workflows:
   version: 2
   test:
     jobs:
       - test
-      - test-php5
