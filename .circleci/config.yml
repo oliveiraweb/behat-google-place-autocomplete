@@ -22,7 +22,7 @@ commands:
           command: git submodule update --init
       - run:
           name: Run style fixer
-          command: bin/ci-style-fixer
+          command: ci-style-fixer
       - run:
           name: Merge master
           command: git fetch origin && git merge origin/master --no-edit
