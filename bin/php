@@ -5,7 +5,6 @@ ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/.. && pwd )"
 # import libraries
 . "${ROOT}"/bin/lib/env.sh
 . "${ROOT}"/bin/lib/images.sh
-. "${ROOT}"/bin/lib/rm.sh
 . get_tty
 . "${ROOT}"/docker/lib/docker_host_user_id.sh
 
