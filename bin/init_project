@@ -1,11 +1,7 @@
 #!/bin/bash +x
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-. "${DIR}"/lib/exitCheck.sh
-
 echo "Installing Composer..."
-"$DIR"/init/install_composer
+submodules/bin/init/install_composer.sh
 exitCheck $?
 
 # install Composer dependancies
