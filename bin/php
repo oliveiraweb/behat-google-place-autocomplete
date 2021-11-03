@@ -4,7 +4,6 @@ ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/.. && pwd )"
 
 # import libraries
 . "${ROOT}"/bin/lib/env.sh
-. "${ROOT}"/bin/lib/images.sh
 . get_tty
 . "${ROOT}"/docker/lib/docker_host_user_id.sh
 
@@ -24,4 +23,4 @@ docker run \
     --net ${PROJECT_NAME}_default \
     --link web:behatgoogleplaceautocomplete.local \
     --rm \
-    ${PHP_ACCOUNT}/${PHP_REPO}:${PHP_TAG} php "$@"
+    chekote/php:7.2.34.d-behat3.4 php "$@"

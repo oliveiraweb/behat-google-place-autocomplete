@@ -3,7 +3,6 @@
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 . "${ROOT}"/docker/lib/docker_host_user_id.sh
-. "${ROOT}"/docker/lib/images.sh
 
 docker run \
     -e LOCAL_USER_ID=$DOCKER_HOST_USER_ID \
@@ -14,5 +13,5 @@ docker run \
     -v $(pwd):/workdir \
     -v ~/.cache:/home/user/.cache \
     -v ~/.ssh:/home/user/.ssh \
-    ${NODE_IMAGE} \
+    chekote/node:9.0.0 \
     yarn "$@"
