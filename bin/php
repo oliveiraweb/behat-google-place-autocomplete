@@ -5,7 +5,7 @@ ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/.. && pwd )"
 # import libraries
 . "${ROOT}"/bin/lib/env.sh
 . get_tty
-. "${ROOT}"/docker/lib/docker_host_user_id.sh
+. submodules/lib/docker_host_user_id.sh
 
 # initialize network
 . "${ROOT}"/docker/bin/init/network.sh
