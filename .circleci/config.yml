@@ -45,15 +45,18 @@ commands:
       - store_artifacts:
           path: artifacts
 
+executors:
+  ubuntu:
+    environment:
+      PATH: /opt/circleci/.pyenv/shims:./bin:./node_modules/.bin:./vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    machine:
+      image: ubuntu-2004:202010-01
+    working_directory: /tmp/behat-google-place-autocomplete
+
 jobs:
   test:
-    working_directory: /tmp/behat-google-place-autocomplete
+    executor: ubuntu
     parallelism: 1
-    machine:
-      enabled: true
-    environment:
-      - PATH: /opt/circleci/.pyenv/shims:./bin:./node_modules/.bin:./vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-
     steps:
       - prep
       - test
