@@ -1,17 +1,16 @@
 #!/bin/bash +x
 
+set -e
+
 echo "Installing Composer..."
 submodules/bin/init/install_composer.sh
-exitCheck $?
 
 # install Composer dependancies
 echo "Installing Composer dependencies..."
 composer install
-exitCheck $?
 
 echo "Running Yarn..."
 yarn
-exitCheck $?
 
 if  [[ ! "$CI" == 'true' ]]; then
     echo "Initializing git hooks..."
