@@ -22,7 +22,7 @@ commands:
           command: git submodule update --init
       - run:
           name: Run style fixer
-          command: bin/ci-style-fixer
+          command: ci-style-fixer
       - run:
           name: Merge master
           command: git fetch origin && git merge origin/master --no-edit
@@ -45,15 +45,18 @@ commands:
       - store_artifacts:
           path: artifacts
 
+executors:
+  ubuntu:
+    environment:
+      PATH: /opt/circleci/.pyenv/shims:./bin:./vendor/bin:./submodules/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:./node_modules/.bin
+    machine:
+      image: ubuntu-2004:202010-01
+    working_directory: /tmp/behat-google-place-autocomplete
+
 jobs:
   test:
-    working_directory: /tmp/behat-google-place-autocomplete
+    executor: ubuntu
     parallelism: 1
-    machine:
-      enabled: true
-    environment:
-      - PATH: /opt/circleci/.pyenv/shims:./bin:./node_modules/.bin:./vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-
     steps:
       - prep
       - test
