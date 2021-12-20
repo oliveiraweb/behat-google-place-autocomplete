@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd12f69341e83455e79ef9fa561f0f55",
+    "content-hash": "e37cffa53b1519c40b0a6a5ba8e4aacb",
     "packages": [
         {
             "name": "behat/behat",
@@ -590,16 +590,16 @@
         },
         {
             "name": "medology/flexible-mink",
-            "version": "v3.0.0",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Medology/FlexibleMink.git",
-                "reference": "8ae18da7258006f45752ec36263bf12fa02d9d42"
+                "reference": "f6d4c12c00c706d2bdef732dc37cf8319eb71c6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Medology/FlexibleMink/zipball/8ae18da7258006f45752ec36263bf12fa02d9d42",
-                "reference": "8ae18da7258006f45752ec36263bf12fa02d9d42",
+                "url": "https://api.github.com/repos/Medology/FlexibleMink/zipball/f6d4c12c00c706d2bdef732dc37cf8319eb71c6a",
+                "reference": "f6d4c12c00c706d2bdef732dc37cf8319eb71c6a",
                 "shasum": ""
             },
             "require": {
@@ -637,7 +637,7 @@
                 "issues": "https://github.com/Medology/FlexibleMink/issues",
                 "source": "https://github.com/Medology/FlexibleMink"
             },
-            "time": "2021-10-05T18:15:38+00:00"
+            "time": "2021-12-17T16:18:13+00:00"
         },
         {
             "name": "nesbot/carbon",
